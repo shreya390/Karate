@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"kdemo\/src\/test\/java\/demo\/features\/Post[1:8]","start":1680771608105,"end":1680771608918,"title":"kdemo\/src\/test\/java\/demo\/features\/Post[1:8] 14:30:08.105-14:30:08.918 Post demo 1"},{"id":2,"group":1,"content":"kdemo\/src\/test\/java\/demo\/features\/Post[2:16]","start":1680771608925,"end":1680771609448,"title":"kdemo\/src\/test\/java\/demo\/features\/Post[2:16] 14:30:08.925-14:30:09.448 Post demo 2"},{"id":3,"group":1,"content":"kdemo\/src\/test\/java\/demo\/features\/Post[3:24]","start":1680771609456,"end":1680771609984,"title":"kdemo\/src\/test\/java\/demo\/features\/Post[3:24] 14:30:09.456-14:30:09.984 Post demo 3"},{"id":4,"group":1,"content":"kdemo\/src\/test\/java\/demo\/features\/Post[4:32]","start":1680771609989,"end":1680771610519,"title":"kdemo\/src\/test\/java\/demo\/features\/Post[4:32] 14:30:09.989-14:30:10.519 Post demo 4"},{"id":5,"group":1,"content":"kdemo\/src\/test\/java\/demo\/features\/Post[5:42]","start":1680771610524,"end":1680771611053,"title":"kdemo\/src\/test\/java\/demo\/features\/Post[5:42] 14:30:10.524-14:30:11.053 Post demo 5"},{"id":6,"group":1,"content":"kdemo\/src\/test\/java\/demo\/features\/Post[6:53]","start":1680771611056,"end":1680771611566,"title":"kdemo\/src\/test\/java\/demo\/features\/Post[6:53] 14:30:11.056-14:30:11.566 Post demo 6"},{"id":7,"group":1,"content":"kdemo\/src\/test\/java\/demo\/features\/Post[7:67]","start":1680771611572,"end":1680771612092,"title":"kdemo\/src\/test\/java\/demo\/features\/Post[7:67] 14:30:11.572-14:30:12.092 Post demo 7"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

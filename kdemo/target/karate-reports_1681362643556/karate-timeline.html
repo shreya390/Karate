@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"demo\/features\/GetCallDemo[1:6]","start":1681362584952,"end":1681362585034,"title":"demo\/features\/GetCallDemo[1:6] 10:39:44.952-10:39:45.034 Run a sample Get API"},{"id":2,"group":1,"content":"demo\/features\/GetCallDemo[2:11]","start":1681362585049,"end":1681362585118,"title":"demo\/features\/GetCallDemo[2:11] 10:39:45.049-10:39:45.118 Get demo1"},{"id":3,"group":1,"content":"demo\/features\/GetCallDemo[3:22]","start":1681362585130,"end":1681362585177,"title":"demo\/features\/GetCallDemo[3:22] 10:39:45.130-10:39:45.177 Get demo 2"},{"id":4,"group":1,"content":"demo\/features\/GetCallDemo[4:28]","start":1681362585186,"end":1681362585240,"title":"demo\/features\/GetCallDemo[4:28] 10:39:45.186-10:39:45.240 Get demo 3"},{"id":5,"group":1,"content":"demo\/features\/GetCallDemo[5:35]","start":1681362585257,"end":1681362585315,"title":"demo\/features\/GetCallDemo[5:35] 10:39:45.257-10:39:45.315 Get demo 4"},{"id":6,"group":1,"content":"demo\/features\/GetCallDemo[6.1:50]","start":1681362585327,"end":1681362585394,"title":"demo\/features\/GetCallDemo[6.1:50] 10:39:45.327-10:39:45.394 GET demo 5"},{"id":7,"group":1,"content":"demo\/features\/GetCallDemo[6.2:51]","start":1681362585404,"end":1681362585456,"title":"demo\/features\/GetCallDemo[6.2:51] 10:39:45.404-10:39:45.456 GET demo 5"},{"id":8,"group":1,"content":"demo\/features\/GetCallDemo[6.3:52]","start":1681362585465,"end":1681362585509,"title":"demo\/features\/GetCallDemo[6.3:52] 10:39:45.465-10:39:45.509 GET demo 5"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

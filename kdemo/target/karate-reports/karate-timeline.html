@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-1","id":1},{"content":"pool-1-thread-2","id":2},{"content":"pool-1-thread-3","id":3},{"content":"pool-1-thread-4","id":4},{"content":"pool-1-thread-5","id":5}];
+var items = [{"id":1,"group":1,"content":"demo\/features\/APIKeyAuthentication[1:3]","start":1681362643929,"end":1681362644524,"title":"demo\/features\/APIKeyAuthentication[1:3] 10:40:43.929-10:40:44.524 API Key Validation"},{"id":2,"group":2,"content":"demo\/features\/BasicAuth[1:3]","start":1681362643929,"end":1681362645089,"title":"demo\/features\/BasicAuth[1:3] 10:40:43.929-10:40:45.089 Basic validation"},{"id":3,"group":3,"content":"demo\/features\/BasicAuth[2:11]","start":1681362643929,"end":1681362645071,"title":"demo\/features\/BasicAuth[2:11] 10:40:43.929-10:40:45.071 Basic failure"},{"id":4,"group":4,"content":"demo\/features\/BearerToken[1:3]","start":1681362643929,"end":1681362644416,"title":"demo\/features\/BearerToken[1:3] 10:40:43.929-10:40:44.416 Validation using Bearer token"},{"id":5,"group":5,"content":"demo\/features\/GetCallDemo[1:6]","start":1681362643929,"end":1681362644302,"title":"demo\/features\/GetCallDemo[1:6] 10:40:43.929-10:40:44.302 Run a sample Get API"},{"id":6,"group":5,"content":"demo\/features\/GetCallDemo[2:11]","start":1681362644309,"end":1681362644359,"title":"demo\/features\/GetCallDemo[2:11] 10:40:44.309-10:40:44.359 Get demo1"},{"id":7,"group":5,"content":"demo\/features\/GetCallDemo[3:22]","start":1681362644363,"end":1681362644408,"title":"demo\/features\/GetCallDemo[3:22] 10:40:44.363-10:40:44.408 Get demo 2"},{"id":8,"group":5,"content":"demo\/features\/GetCallDemo[4:28]","start":1681362644412,"end":1681362644453,"title":"demo\/features\/GetCallDemo[4:28] 10:40:44.412-10:40:44.453 Get demo 3"},{"id":9,"group":4,"content":"demo\/features\/GetCallDemo[5:35]","start":1681362644419,"end":1681362644482,"title":"demo\/features\/GetCallDemo[5:35] 10:40:44.419-10:40:44.482 Get demo 4"},{"id":10,"group":5,"content":"demo\/features\/GetCallDemo[6.1:50]","start":1681362644456,"end":1681362644508,"title":"demo\/features\/GetCallDemo[6.1:50] 10:40:44.456-10:40:44.508 GET demo 5"},{"id":11,"group":4,"content":"demo\/features\/GetCallDemo[6.2:51]","start":1681362644485,"end":1681362644545,"title":"demo\/features\/GetCallDemo[6.2:51] 10:40:44.485-10:40:44.545 GET demo 5"},{"id":12,"group":5,"content":"demo\/features\/GetCallDemo[6.3:52]","start":1681362644511,"end":1681362644565,"title":"demo\/features\/GetCallDemo[6.3:52] 10:40:44.511-10:40:44.565 GET demo 5"},{"id":13,"group":1,"content":"demo\/features\/JSONSchemaValidation[1:3]","start":1681362644527,"end":1681362644580,"title":"demo\/features\/JSONSchemaValidation[1:3] 10:40:44.527-10:40:44.580 Get a Single User and Verify its JSON Fields"},{"id":14,"group":4,"content":"demo\/features\/Post[1:9]","start":1681362644548,"end":1681362644947,"title":"demo\/features\/Post[1:9] 10:40:44.548-10:40:44.947 Post demo 1"},{"id":15,"group":5,"content":"demo\/features\/Post[2:17]","start":1681362644568,"end":1681362644948,"title":"demo\/features\/Post[2:17] 10:40:44.568-10:40:44.948 Post demo 2"},{"id":16,"group":1,"content":"demo\/features\/Post[3:25]","start":1681362644583,"end":1681362644955,"title":"demo\/features\/Post[3:25] 10:40:44.583-10:40:44.955 Post demo 3"},{"id":17,"group":4,"content":"demo\/features\/Post[4:33]","start":1681362644952,"end":1681362645311,"title":"demo\/features\/Post[4:33] 10:40:44.952-10:40:45.311 Post demo 4"},{"id":18,"group":5,"content":"demo\/features\/Post[5:43]","start":1681362644952,"end":1681362645311,"title":"demo\/features\/Post[5:43] 10:40:44.952-10:40:45.311 Post demo 5"},{"id":19,"group":1,"content":"demo\/features\/Post[6:54]","start":1681362644958,"end":1681362645306,"title":"demo\/features\/Post[6:54] 10:40:44.958-10:40:45.306 Post demo 6"},{"id":20,"group":3,"content":"demo\/features\/Post[7:68]","start":1681362645074,"end":1681362645431,"title":"demo\/features\/Post[7:68] 10:40:45.074-10:40:45.431 Post demo 7"},{"id":21,"group":2,"content":"demo\/features\/persons[1:7]","start":1681362645092,"end":1681362645364,"title":"demo\/features\/persons[1:7] 10:40:45.092-10:40:45.364 get all users and then get the first user by id"},{"id":22,"group":1,"content":"demo\/features\/persons[2:18]","start":1681362645308,"end":1681362645845,"title":"demo\/features\/persons[2:18] 10:40:45.308-10:40:45.845 create a user and then get it by id"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
